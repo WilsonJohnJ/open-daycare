@@ -45,6 +45,11 @@ function useLikes() {
     const storedLikedPosts = readLikedPosts();
     if (Object.keys(storedLikedPosts).length === 0) return;
 
+    // The spec requires reading localStorage from an effect, never during the
+    // initial render, so the server and client first paint the same counts and
+    // React never reports a hydration mismatch. That deliberate post-hydration
+    // setState is what this rule flags.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLikedPosts(storedLikedPosts);
   }, []);
 
