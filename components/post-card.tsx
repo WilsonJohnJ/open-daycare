@@ -4,9 +4,11 @@ import type { Post } from "@/lib/types";
 
 interface PostCardProps {
   post: Post;
+  liked: boolean;
+  onToggleLike: (postId: string) => void;
 }
 
-export function PostCard({ post }: PostCardProps) {
+export function PostCard({ post, liked, onToggleLike }: PostCardProps) {
   const theme = postTypeTheme[post.type];
 
   return (
@@ -61,10 +63,20 @@ export function PostCard({ post }: PostCardProps) {
       )}
 
       <div className="mt-4 flex items-center gap-[18px] border-t border-hairline pt-[14px]">
-        <span className="flex items-center gap-[7px] text-[14px] font-bold text-like">
-          <Heart width={19} height={19} filled />
-          {post.likes}
-        </span>
+        <button
+          type="button"
+          onClick={() => onToggleLike(post.id)}
+          aria-pressed={liked}
+          aria-label={
+            liked
+              ? `Quitar like a la publicación de ${post.author.name}`
+              : `Dar like a la publicación de ${post.author.name}`
+          }
+          className="flex items-center gap-[7px] text-[14px] font-bold text-like"
+        >
+          <Heart width={19} height={19} filled={liked} />
+          {post.likes + (liked ? 1 : 0)}
+        </button>
         <a
           href="#"
           className="flex items-center gap-[7px] text-[14px] font-bold text-muted"
