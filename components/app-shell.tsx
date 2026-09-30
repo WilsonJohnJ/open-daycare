@@ -15,6 +15,15 @@ export function AppShell({ children }: AppShellProps) {
     <div className="flex h-screen overflow-hidden bg-canvas">
       <Sidebar open={isNavOpen} onClose={() => setIsNavOpen(false)} />
 
+      {isNavOpen && (
+        <button
+          type="button"
+          aria-label="Cerrar menú"
+          onClick={() => setIsNavOpen(false)}
+          className="fixed inset-0 z-40 bg-ink/30 md:hidden"
+        />
+      )}
+
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="flex shrink-0 items-center gap-3 border-b border-line bg-surface px-4 py-3 md:hidden">
           <button
