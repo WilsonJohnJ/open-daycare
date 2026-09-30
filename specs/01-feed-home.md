@@ -1,6 +1,6 @@
 # SPEC 01 — Feed del personal como home
 
-> **Status:** Draft
+> **Status:** Approved
 > **Depends on:** —
 > **Date:** 2026-09-29
 > **Objective:** Reemplazar el boilerplate de create-next-app por el feed del personal en `/`, replicando `references/pantallas/feed.dc.html` con Tailwind v4, datos mock tipados y likes persistidos en `localStorage`.
