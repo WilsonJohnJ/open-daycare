@@ -1,0 +1,9 @@
+# En tu .opencode/config.yml
+tokens:
+  source: "@theme"
+navigation:
+  link_real_routes: true
+  allow_404: true
+typography:
+  provider: "google"
+  font: "next/font"
