@@ -20,7 +20,7 @@ export function AppShell({ children }: AppShellProps) {
           type="button"
           aria-label="Cerrar menú"
           onClick={() => setIsNavOpen(false)}
-          className="fixed inset-0 z-40 bg-ink/30 md:hidden"
+          className="fixed inset-0 z-[60] bg-ink/30 md:hidden"
         />
       )}
 

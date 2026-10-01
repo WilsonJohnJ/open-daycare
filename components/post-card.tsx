@@ -55,7 +55,7 @@ export function PostCard({ post, liked, onToggleLike }: PostCardProps) {
       {post.photo && (
         <a
           href="#"
-          className="mt-[14px] flex h-[200px] flex-col items-center justify-center gap-2 rounded-[16px] border-[1.5px] border-dashed border-photo-border bg-photo-bg text-photo-text"
+          className="mt-[14px] flex h-[200px] flex-col items-center justify-center gap-2 rounded-[16px] border-[length:1.5px] border-dashed border-photo-border bg-photo-bg text-photo-text"
         >
           <ImageIcon width={30} height={30} strokeWidth={1.7} />
           <span className="truncate text-[13.5px]">{post.photo.label}</span>
