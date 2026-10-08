@@ -112,32 +112,32 @@ Sombras: botón `0 8px 18px -8px rgb(238 129 100 / 0.75)`, tarjeta `0 4px 16px -
 
 ## Acceptance criteria
 
-- [ ] `npm run build` termina sin errores de TypeScript.
-- [ ] `npm run lint` no reporta errores nuevos; siguen sólo los preexistentes de `references/pantallas/support.js`.
-- [ ] El fondo del body es `#F6ECDF` y no hay reglas de `prefers-color-scheme` en `globals.css`.
-- [ ] El título de la pestaña es "OpenDayCare · Sala Soles".
-- [ ] `<html lang="es">` y no queda ninguna variable de Geist.
-- [ ] DevTools → Computed muestra `Nunito` en el cuerpo de texto y `Fredoka` en el logo, el saludo y los nombres.
-- [ ] En runtime no hay ningún request a `fonts.googleapis.com` ni a `fonts.gstatic.com`; ambas fuentes se sirven desde `/_next/static/media/`.
-- [ ] En viewports ≥768px el sidebar mide 248px de ancho, es pegajoso y ocupa el 100% del alto de la pantalla.
-- [ ] El item "Feed" del nav tiene fondo `#FBE3D8` y texto `#D9583C`; los otros tres son transparentes con texto `#6E6359`.
-- [ ] El botón "Nueva publicación" muestra el gradiente vertical `#F4977E` → `#EE8164`.
-- [ ] El logo muestra el gradiente `#F8C3A8` → `#F2937A` con el ícono de sol.
-- [ ] Se renderizan exactamente 3 tarjetas, en este orden: logro de Mateo (14:20), actividad de Mateo (09:40, con foto), anuncio general (07:50).
-- [ ] El aviso se renderiza con avatar de megáfono; los otros dos con avatar de inicial "M".
-- [ ] "Para: toda la sala" aparece sólo en el anuncio; los otros dos muestran "Para: familia de Mateo".
-- [ ] El placeholder de foto tiene borde punteado de 1.5px, fondo `#F4ECE1` y 200px de alto.
-- [ ] La columna de contenido tiene 760px de ancho máximo y está centrada.
-- [ ] El body no scrollea: el scroll ocurre dentro de `main`.
-- [ ] "Nueva publicación", "Niños", "Avisos", "Mi cuenta", comentarios y "Editar" tienen `href="#"` y no navegan.
-- [ ] En viewports <768px el sidebar no está visible y sí hay una barra superior con botón hamburguesa.
-- [ ] La hamburguesa abre el sidebar como drawer superpuesto y el overlay lo cierra.
-- [ ] El primer clic en el corazón de la tarjeta del logro lleva el contador de 3 a 4 y rellena el ícono.
-- [ ] El segundo clic lo devuelve a 3 y lo des-rellena.
-- [ ] Los comentarios siguen mostrando su contador estático (3 / 2 / 0 → 1 / 2 / 0) y no son interactivos.
-- [ ] Tras recargar, la tarjeta del logro sigue con el corazón activo y el contador en 4.
-- [ ] `localStorage["opendaycare:likes:v1"]` contiene sólo ids marcados (`{"post-achievement-mateo":true}`), sin contadores.
-- [ ] La consola del browser está sin errores ni warnings de hidratación.
+- [x] `npm run build` termina sin errores de TypeScript.
+- [x] `npm run lint` no reporta errores nuevos; siguen sólo los preexistentes de `references/pantallas/support.js`.
+- [x] El fondo del body es `#F6ECDF` y no hay reglas de `prefers-color-scheme` en `globals.css`.
+- [x] El título de la pestaña es "OpenDayCare · Sala Soles".
+- [x] `<html lang="es">` y no queda ninguna variable de Geist.
+- [x] DevTools → Computed muestra `Nunito` en el cuerpo de texto y `Fredoka` en el logo, el saludo y los nombres.
+- [x] En runtime no hay ningún request a `fonts.googleapis.com` ni a `fonts.gstatic.com`; ambas fuentes se sirven desde `/_next/static/media/`.
+- [x] En viewports ≥768px el sidebar mide 248px de ancho, es pegajoso y ocupa el 100% del alto de la pantalla.
+- [x] El item "Feed" del nav tiene fondo `#FBE3D8` y texto `#D9583C`; los otros tres son transparentes con texto `#6E6359`.
+- [x] El botón "Nueva publicación" muestra el gradiente vertical `#F4977E` → `#EE8164`.
+- [x] El logo muestra el gradiente `#F8C3A8` → `#F2937A` con el ícono de sol.
+- [x] Se renderizan exactamente 3 tarjetas, en este orden: logro de Mateo (14:20), actividad de Mateo (09:40, con foto), anuncio general (07:50).
+- [x] El aviso se renderiza con avatar de megáfono; los otros dos con avatar de inicial "M".
+- [x] "Para: toda la sala" aparece sólo en el anuncio; los otros dos muestran "Para: familia de Mateo".
+- [x] El placeholder de foto tiene borde punteado de 1.5px, fondo `#F4ECE1` y 200px de alto.
+- [x] La columna de contenido tiene 760px de ancho máximo y está centrada.
+- [x] El body no scrollea: el scroll ocurre dentro de `main`.
+- [x] "Nueva publicación", "Niños", "Avisos", "Mi cuenta", comentarios y "Editar" tienen `href="#"` y no navegan.
+- [x] En viewports <768px el sidebar no está visible y sí hay una barra superior con botón hamburguesa.
+- [x] La hamburguesa abre el sidebar como drawer superpuesto y el overlay lo cierra.
+- [x] El primer clic en el corazón de la tarjeta del logro lleva el contador de 3 a 4 y rellena el ícono.
+- [x] El segundo clic lo devuelve a 3 y lo des-rellena.
+- [x] Los comentarios siguen mostrando su contador estático (3 / 2 / 0 → 1 / 2 / 0) y no son interactivos.
+- [x] Tras recargar, la tarjeta del logro sigue con el corazón activo y el contador en 4.
+- [x] `localStorage["opendaycare:likes:v1"]` contiene sólo ids marcados (`{"post-achievement-mateo":true}`), sin contadores.
+- [x] La consola del browser está sin errores ni warnings de hidratación.
 
 ## Decisions
 

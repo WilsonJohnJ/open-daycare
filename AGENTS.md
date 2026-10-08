@@ -18,6 +18,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - /spec Usaremos esta habilidad para crear las especificaciones.
 - /spec-impl Usaremos esta skill para hacer las implementaciones.
+- /verify-spec Comando (`.opencode/command/verify-spec.md`) que verifica los "Acceptance criteria" de un spec, corrige el código que no cumple y marca los checks. Resuelve el spec y delega en el agente `spec-verifier`. Forma el flujo: `/spec` → `/spec-impl` → `/verify-spec`.
+
+## Agentes
+
+- `spec-verifier` (`.opencode/agent/spec-verifier.md`): agente de verificación de specs en modo corrección. Lee el spec, clasifica cada criterio (visual / prácticas Next.js / lint+typecheck / consola / estructura de código), lo verifica con evidencia real (Playwright + visión contra `references/screenshots/`, Context7 + `node_modules/next/dist/docs/`, `npm run lint` y `npm run build`), arregla lo que falle, marca los checkboxes y emite un reporte final. **Nunca commitea ni cambia el estado del spec.**
 
 ## Comandos
 
@@ -43,7 +48,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Workflow spec-driven
 
-- Specs viven en `specs/NN-slug.md` (la carpeta **todavía no existe**), con estado en el header y `specs/.spec-config.yml` para `AutoCreateBranch`.
+- Specs viven en `specs/NN-slug.md`, con estado en el header y `specs/.spec-config.yml` para `AutoCreateBranch`. Ejemplo: `specs/01-feed-home.md` (implementada y verificada).
 - Skills en `.agents/skills/spec` y `.agents/skills/spec-impl` (instaladas desde `klerith/fernando-skills`, fijadas en `skills-lock.json`). Ambas tienen `disable-model-invocation: true`: **solo corren si el usuario las pide explícitamente**, nunca las auto-invokes.
 - `spec-impl` exige estado "Approved" (o equivalente), crea la branch `spec-NN-slug` y **nunca commitea solo** — el commit es decisión del usuario.
 - El usuario escribe en español y el skill `/spec` obliga a responder en el idioma del prompt: respondé en español.
