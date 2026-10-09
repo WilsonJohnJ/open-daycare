@@ -110,22 +110,22 @@ Tokens nuevos en `globals.css` (sólo chrome; los badges no son tokens):
 
 ## Acceptance criteria
 
-- [ ] `npm run build` sin errores de TypeScript; `npm run lint` sin errores nuevos (sólo los preexistentes de `references/pantallas/support.js`).
-- [ ] `/kids` renderiza 8 tarjetas en el orden de la tabla, con avatar, nombre y "edad · N padres" exactos ("sin padres vinculados" para Valentina).
-- [ ] Sólo Mateo muestra badge MANÍ, Tomás LACTOSA y Valentina VINCULAR; las otras 5 tarjetas sin badge.
-- [ ] A ≥768px la grilla tiene 2 columnas; el hover de la tarjeta pone borde `#F2A78E` y sube 2px.
-- [ ] Escribir "mendez" deja sólo Sofía Méndez y el rótulo dice "1 niño"; "zzz" muestra «Sin resultados para «zzz»» y "0 niños".
-- [ ] Click en la tarjeta de Mateo navega a `/kids/mateo-fernandez`.
-- [ ] El perfil de Mateo muestra avatar de 84px `#A9D9E8`, "3 años · Sala Soles", ficha "12 mar 2022" / "Soles" / "feb 2025".
-- [ ] El panel "Alergias y notas" tiene fondo `#FBDAD6` y el texto literal del mockup; en un niño sin `notes` el panel no existe.
-- [ ] "PADRES VINCULADOS" muestra a Lucía con badge ACTIVA y sub "Mamá · activa", y a Diego con badge PENDIENTE y sub "Papá · invitación enviada".
-- [ ] "Volver a Niños" navega a `/kids`.
-- [ ] `/kids/<id-inexistente>` devuelve la 404 de Next (`notFound()`).
-- [ ] En `/`, `/kids` y `/kids/[id]` el item activo del sidebar es correcto (`#FBE3D8`/`#D9583C`); "Feed" lleva a `/` y "Niños" a `/kids` desde cualquier pantalla.
-- [ ] "Agregar niño", "Editar", "Resumen del día", "Vincular otro padre" y "Cerrar sesión" tienen `href="#"` y no navegan.
-- [ ] A 375px: grilla de 1 columna, perfil apilado, barra superior con hamburguesa que abre y cierra el drawer.
-- [ ] La consola del browser está sin errores ni warnings de hidratación.
-- [ ] Capturas guardadas en `.playwright-mcp/` y comparadas contra `references/screenshots/ninos.png` y contra `perfil-nino.dc.html`.
+- [x] `npm run build` sin errores de TypeScript; `npm run lint` sin errores nuevos (sólo los preexistentes de `references/pantallas/support.js`).
+- [x] `/kids` renderiza 8 tarjetas en el orden de la tabla, con avatar, nombre y "edad · N padres" exactos ("sin padres vinculados" para Valentina).
+- [x] Sólo Mateo muestra badge MANÍ, Tomás LACTOSA y Valentina VINCULAR; las otras 5 tarjetas sin badge.
+- [x] A ≥768px la grilla tiene 2 columnas; el hover de la tarjeta pone borde `#F2A78E` y sube 2px.
+- [x] Escribir "mendez" deja sólo Sofía Méndez y el rótulo dice "1 niño"; "zzz" muestra «Sin resultados para «zzz»» y "0 niños".
+- [x] Click en la tarjeta de Mateo navega a `/kids/mateo-fernandez`.
+- [x] El perfil de Mateo muestra avatar de 84px `#A9D9E8`, "3 años · Sala Soles", ficha "12 mar 2022" / "Soles" / "feb 2025".
+- [x] El panel "Alergias y notas" tiene fondo `#FBDAD6` y el texto literal del mockup; en un niño sin `notes` el panel no existe.
+- [x] "PADRES VINCULADOS" muestra a Lucía con badge ACTIVA y sub "Mamá · activa", y a Diego con badge PENDIENTE y sub "Papá · invitación enviada".
+- [x] "Volver a Niños" navega a `/kids`.
+- [x] `/kids/<id-inexistente>` devuelve la 404 de Next (`notFound()`).
+- [x] En `/`, `/kids` y `/kids/[id]` el item activo del sidebar es correcto (`#FBE3D8`/`#D9583C`); "Feed" lleva a `/` y "Niños" a `/kids` desde cualquier pantalla.
+- [x] "Agregar niño", "Editar", "Resumen del día", "Vincular otro padre" y "Cerrar sesión" tienen `href="#"` y no navegan.
+- [x] A 375px: grilla de 1 columna, perfil apilado, barra superior con hamburguesa que abre y cierra el drawer.
+- [x] La consola del browser está sin errores ni warnings de hidratación.
+- [x] Capturas guardadas en `.playwright-mcp/` y comparadas contra `references/screenshots/ninos.png` y contra `perfil-nino.dc.html`.
 
 ## Decisions
 
