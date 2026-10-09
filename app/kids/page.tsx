@@ -1,18 +1,17 @@
 import { AppShell } from "@/components/app-shell";
+import { KidCard } from "@/components/kid-card";
+import { KidsHeader } from "@/components/kids-header";
+import { children as childList } from "@/lib/mock/children";
 
 export default function KidsPage() {
   return (
     <AppShell activeItem="kids">
       <div className="mx-auto w-full max-w-[880px] px-10 pt-[34px] pb-20">
-        <div className="mb-[22px] flex items-end justify-between gap-4">
-          <div>
-            <div className="mb-1 text-[12.5px] font-extrabold tracking-[0.8px] text-accent">
-              GESTIÓN
-            </div>
-            <h1 className="font-display text-[30px] font-semibold text-ink">
-              Niños
-            </h1>
-          </div>
+        <KidsHeader count={childList.length} />
+        <div className="grid grid-cols-1 gap-[14px] md:grid-cols-2">
+          {childList.map((child) => (
+            <KidCard key={child.id} child={child} />
+          ))}
         </div>
       </div>
     </AppShell>

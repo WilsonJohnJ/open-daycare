@@ -24,6 +24,11 @@
   --color-btn-to: #ee8164;
   --color-logo-from: #f8c3a8;
   --color-logo-to: #f2937a;
+  --color-alert-bg: #fbdad6;
+  --color-alert-surface: #f4a8a0;
+  --color-alert-title: #c5413a;
+  --color-alert-body: #b25249;
+  --color-hover-line: #f2a78e;
 }
 
 @theme inline {
