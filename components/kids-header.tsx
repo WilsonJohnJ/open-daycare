@@ -2,9 +2,11 @@ import { Plus, Search } from "@/components/icons";
 
 interface KidsHeaderProps {
   count: number;
+  query: string;
+  onQueryChange: (value: string) => void;
 }
 
-export function KidsHeader({ count }: KidsHeaderProps) {
+export function KidsHeader({ count, query, onQueryChange }: KidsHeaderProps) {
   return (
     <>
       <div className="mb-[22px] flex items-end justify-between gap-4">
@@ -31,6 +33,8 @@ export function KidsHeader({ count }: KidsHeaderProps) {
           type="text"
           aria-label="Buscar niño"
           placeholder="Buscar niño…"
+          value={query}
+          onChange={(event) => onQueryChange(event.target.value)}
           className="min-w-0 flex-1 border-none bg-transparent text-[15px] text-ink outline-none placeholder:text-[#B6A99B]"
         />
       </div>
