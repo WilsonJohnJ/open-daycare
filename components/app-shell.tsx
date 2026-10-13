@@ -2,18 +2,23 @@
 
 import { useState, type ReactNode } from "react";
 import { Menu } from "@/components/icons";
-import { Sidebar } from "@/components/sidebar";
+import { Sidebar, type SidebarActiveItem } from "@/components/sidebar";
 
 interface AppShellProps {
   children: ReactNode;
+  activeItem: SidebarActiveItem;
 }
 
-export function AppShell({ children }: AppShellProps) {
+export function AppShell({ children, activeItem }: AppShellProps) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <div className="flex h-screen overflow-hidden bg-canvas">
-      <Sidebar open={isNavOpen} onClose={() => setIsNavOpen(false)} />
+      <Sidebar
+        open={isNavOpen}
+        onClose={() => setIsNavOpen(false)}
+        activeItem={activeItem}
+      />
 
       {isNavOpen && (
         <button

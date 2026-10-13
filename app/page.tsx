@@ -4,7 +4,7 @@ import { feedPosts } from "@/lib/mock/feed";
 
 export default function Home() {
   return (
-    <AppShell>
+    <AppShell activeItem="feed">
       <FeedView posts={feedPosts} />
     </AppShell>
   );
